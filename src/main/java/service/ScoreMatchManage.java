@@ -16,6 +16,7 @@ public class ScoreMatchManage {
 	 public static final int FIVE = 5 ;
 	 public static final int SIX = 6 ;
 	 public static final int SEVEN = 7 ;
+	 public static final int FORTY = 40 ;
 	
 	private Match match ;
 	
@@ -24,8 +25,8 @@ public class ScoreMatchManage {
     }
     
     public void calculWinPoint(Player winPointPlayer , Player opponentPlayer){
-		if(winPointPlayer.getMatchScore() == 40) {
-			if(opponentPlayer.getMatchScore() != 40) {
+		if(winPointPlayer.getMatchScore() == FORTY) {
+			if(opponentPlayer.getMatchScore() != FORTY) {
 				match.winMatch(winPointPlayer);
 			} else if (winPointPlayer.isDeuce()) {
 				match.winMatch(winPointPlayer) ;
